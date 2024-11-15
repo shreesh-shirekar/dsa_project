@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educators Login / Sign Up</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#" class="brand-title">Educators Portal</a>
+        <a class="educator-link" href="index.html">Are you a student?</a>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1 id="form-title">Login / Sign Up</h1>
+
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Enter Email" required>
+            <button type="button" id="email-submit">Next</button>
+
+            <input type="text" id="login-auid" placeholder="Enter AU ID (e.g., AUE123456)" style="display: none;" required>
+            <button type="submit" id="login-submit" style="display: none;">Login</button>
+        </form>
+
+        <form id="signup-form" style="display: none;">
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="text" id="signup-teacher-id" placeholder="Teacher ID (e.g., AUE123456)" required>
+            <input type="text" id="signup-first-name" placeholder="First Name" required>
+            <input type="text" id="signup-last-name" placeholder="Last Name" required>
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <a class="toggle-link" id="toggle-link">Don't have an account? Sign Up</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

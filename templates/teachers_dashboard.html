@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers Dashboard</title>
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" class="brand-title">Teachers Dashboard</a>
+        <a class="educator-link" href="index.html">Logout</a>
+    </div>
+
+    <div class="container">
+        <h1>Teachers Dashboard</h1>
+
+        <!-- Schedule a Class Form -->
+        <h2>Schedule a Class</h2>
+        <form id="schedule-class-form">
+            <input type="text" id="subject" placeholder="Subject" required>
+            <input type="text" id="date" placeholder="Date (DD-MM-YYYY)" required>
+            <input type="text" id="time" placeholder="Time (HH:MM, 24-hour format)" required>
+            <input type="text" id="teacher" placeholder="Teacher Name" required>
+            <button type="submit">Schedule Class</button>
+        </form>
+
+        <!-- Register a Student Form -->
+        <h2>Register a Student</h2>
+        <form id="register-student-form">
+            <input type="text" id="student-name" placeholder="Student Name" required>
+            <input type="text" id="section-number" placeholder="Section Number" required>
+            <input type="email" id="student-email" placeholder="Student Email" required>
+            <button type="submit">Register Student</button>
+        </form>
+
+        <!-- View Scheduled Classes -->
+        <h2>Scheduled Classes</h2>
+        <button id="view-classes-btn">View Classes</button>
+        <div id="class-list"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
